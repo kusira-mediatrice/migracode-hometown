@@ -1,0 +1,106 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: whitesmoke;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to right, #95d5b2, #3c8761);
+    color: #fff;
+    padding: 2px 1px 1px 1px;
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2px auto;
+    padding: 4px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    object-fit: cover;
+    flex: 1 1 180px;
+}
+
+#image-gallery-volcano:hover {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/Lava_Lake_Nyiragongo_2.jpg');
+}
+#image-gallery-scooter:hover {
+    background-image: url('images/scooter.jpg');
+}
+
+#image-gallery-virunga:hover {
+    background-image: url('images/Virunga_287375-.aug-1.jpg');
+}
+
+
+
+.section {
+    margin-bottom: 2px;
+}
+
+h1,
+h2 {
+    color: #1b4332;
+}
+
+footer {
+    text-align: center;
+    padding: 1px;
+    background: #95d5b2;
+    color: #222;
+    border-top: 1px solid #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    main {
+        max-width: 98vw;
+        padding: 2vw;
+    }
+    .image-gallery img {
+        max-width: 45vw;
+        height: 28vw;
+        min-width: 140px;
+        min-height: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .image-gallery img {
+        max-width: 98vw;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        min-height: 0;
+    }
+    header, footer {
+        padding: 10px 2vw;
+    }
+    main {
+        padding: 1vw;
+    }
+}
